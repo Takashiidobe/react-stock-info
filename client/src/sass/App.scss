@@ -1,0 +1,90 @@
+$white: #f8f8f8;
+$grey: #d3d3d3;
+
+// reset defaults
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  font-size: calc(21px + (26 - 21) * ((100vw - 300px) / (1600 - 300)));
+}
+
+body {
+  background: $white;
+  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
+
+.App {
+  width: 600px;
+  margin: 40px auto;
+  border: 2px solid black;
+  padding: 30px;
+  box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 12.5px;
+  color: black;
+  background: lighten($grey, 10);
+}
+
+.stock-name-label {
+  display: flex;
+  justify-content: center;
+}
+
+.stock-name-input {
+  display: flex;
+  margin: 8px auto;
+}
+
+input[type="text"] {
+  padding: 5px;
+  border: 2px solid #ccc;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  width: 120px;
+  height: 40px;
+  font-size: 26px;
+  text-align: center;
+}
+
+input[type="text"]:focus {
+  border-color: #333;
+  outline: none;
+}
+
+.btn {
+  display: inline-block;
+  margin: 5px;
+  padding: 5px 12px;
+  text-transform: uppercase;
+  font-size: 16px;
+  border-radius: 12.5px;
+  background: #000080;
+  color: $white;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  cursor: pointer;
+  color: #000080;
+  background: $white;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn-active {
+  background: #ff8c00;
+  color: $white;
+}
+
+.btn-active:hover {
+  color: #ff8c00;
+  background: $white;
+}
